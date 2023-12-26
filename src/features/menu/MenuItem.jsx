@@ -45,12 +45,12 @@ function MenuItem({ pizza }) {
           )}
 
           {isInCart && (
-            <div className="flex gap-4">
-              <DeleteItemButton pizzaId={id} />
+            <div className="flex items-center sm:gap-3">
               <UpdateCartItemQuantity
                 itemQuantityInCart={itemQuantityInCart}
                 pizzaId={id}
               />
+              <DeleteItemButton pizzaId={id} />
             </div>
           )}
           {!soldOut && !isInCart && (
